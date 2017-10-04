@@ -115,6 +115,7 @@ def LoopFuncionarios():
 def LoopClientes():
 	while True:
 		pass
+	pass
 
 
 		
