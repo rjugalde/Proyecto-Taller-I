@@ -1,5 +1,14 @@
 import csv
 
+
+#Listas globales para manejo de los datos de los archivos
+
+Funcionarios = []
+Clientes = []
+
+
+
+
 def LeerColumna(FilePath,column): 
 	ListaSalida=[]
 	with open("ArchivosEntrada/"+FilePath+".txt", 'r') as csvfile: ##Abre el archivo como un csv, independiente del formato
