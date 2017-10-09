@@ -271,13 +271,55 @@ def LoopEliminar():
 					print("")
 				
 		if respuesta == "2":
-			pass
+			print("Rutas que se pueden eliminar:")
+			for i in Rutas:
+				print(i[0]+" | "+i[1]+" | "+i[2]+" | "+i[3]+" | "+i[4]+" | "+i[5]+" | "+i[6])
+			
+			aerolinea = input("Digite la aerolinea: ")
+			ruta = input("Digite el codigo de ruta: ")
+			for item in Rutas[:]:
+				if item[1] == aerolinea and item[3] == ruta:
+					Rutas.remove(item)
+					print("Ruta eliminada.")
+					print("")
 		if respuesta == "3":
-			pass
+			print("Vuelos que se pueden eliminar:")
+			for i in Vuelos:
+				print(i[0]+" | "+i[1]+" | "+i[2]+" | "+i[3]+" | "+i[4]+" | "+i[5])
+			
+			agencia = input("Digite la agencia: ")
+			aerolinea = input("Digite la aerolinea: ")
+			avion = input("Digite la matricula: ")
+			for item in Vuelos[:]:
+				if item[0] == agencia and item[1] == aerolinea and item[2] == avion:
+					Vuelos.remove(item)
+					print("Vuelo eliminado.")
+					print("")
 		if respuesta == "4":
-			pass
+			print("Clientes que se pueden eliminar:")
+			for i in Clientes:
+				print(i[0]+" | "+i[1])
+			
+			cliente = input("Digite el codigo del cliente: ")
+			for item in Clientes[:]:
+				if item[0] == cliente:
+					Clientes.remove(item)
+					print("Cliente eliminado.")
+					print("")
 		if respuesta == "5":
-			pass
+			print("Asignaciones de Vuelos que se pueden eliminar:")
+			for i in AsignacionVuelos:
+				print("Matricula:"+i[0]+" | "+"Agencia:"+i[1]+" | "+"Aerolinea:"+i[2]+" | "+"Origen:"+i[3]+" | "+"Destino:"+i[4])
+			
+			aerolinea = input("Digite la aerolinea: ")
+			matricula = input("Digite la matricula: ")
+			origen = input("Digite el origen: ")
+			destino = input("Digite el destino: ")
+			for item in AsignacionVuelos[:]:
+				if item[2] == aerolinea and item[0] == matricula and item[3] == origen and item[4] == destino:
+					AsignacionVuelos.remove(item)
+					print("Asignacion de vuelo eliminada.")
+					print("")
 		if respuesta == "S":
 			break
 
