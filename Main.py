@@ -363,6 +363,81 @@ def LoopClientes():
 		if respuesta == "S":
 			break
 
+def loopReportes():
+	while True:
+		
+		print("Que desea consultar:")
+		print("1) Agencias de viajes")
+		print("2) Aerolíneas de una agencia")
+		print("3) Vuelos de una Aerolínea")		
+		print("4) Rutas de un vuelo")
+		print("5) Asignación de vuelos")
+		print("6) Puestos disponibles")
+		print("7) Puesto de un funcionario")
+		print("8) Horas de una ruta")
+		print("9) Rango de un funcionario")
+		print("S) Salir")
+		
+		respuesta=input(": ")
+		print("")
+		
+		if respuesta == "1":			
+			for item in Agencias:
+				print(item[0] +" | "+item[1])
+			print("")
+				
+		if respuesta == "2":
+			agencia = input("Digite el codigo de la agencia: ")
+			for item in Aerolineas:
+				if item[0] == agencia:
+					print(item[0]+" | "+item[1]+" | "+item[2])
+			print("")
+				
+		if respuesta == "3":
+			vuelos = input("Digite el codigo de la aerolinea: ")
+			for item in Vuelos:
+				if item[1] == vuelos:
+					print(item[0]+" | "+item[1]+" | "+item[2]+" | "+item[3]+" | "+item[4]+" | "+item[5])
+			print("")
+		if respuesta == "4":
+			rutas = input("Digite la matricula del avion: ")
+			for item in Rutas:
+				if item[2] == rutas:
+					print(item[0]+" | "+item[1]+" | "+item[2]+" | "+item[3]+" | "+item[4]+" | "+item[5])
+			print("")
+		if respuesta == "5":
+			asignacion = input("Digite la matricula del avion: ")
+			for item in AsignacionVuelos:
+				if item[0] == asignacion:
+					print(item[0]+" | "+item[1]+" | "+item[2]+" | "+item[3]+" | "+item[4])
+			print("")
+		if respuesta == "6":
+			disponibles = input("Digite la matricula del avion: ")
+			for item in Vuelos:
+				if item[2] == rutas:
+					print(item[2]+" | "+item[4])
+			print("")
+		if respuesta == "7":
+			funcionarios = input("Digite el codigo del funcionario: ")
+			for item in Funcionarios:
+				if item[0] == funcionarios:
+					print(item[1]+" | "+item[2])
+			print("")
+		if respuesta == "8":
+			horas = input("Digite la matricula del avion: ")
+			for item in Rutas:
+				if item[2] == horas:
+					print(item[0]+" | "+item[1]+" | "+item[2]+" | "+item[3]+" | "+item[4]+" | "+item[5]+" | "+item[6])
+			print("")
+		if respuesta == "9":
+			rango = input("Digite el codigo del funcionario: ")
+			for item in Funcionarios:
+				if item[0] == rango:
+					print(item[1]+" | "+item[2])
+		if respuesta == "S":
+			break
+	
+        
 
 		
 Main()
