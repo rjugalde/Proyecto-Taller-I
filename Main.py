@@ -370,15 +370,10 @@ def LoopClientes():
 	while True:
 		
 		print("Que desea consultar:")
-		print("1) Agencias de viajes")
-		print("2) Aerolíneas de una agencia")
-		print("3) Vuelos de una Aerolínea")		
-		print("4) Rutas de un vuelo")
-		print("5) Asignación de vuelos")
-		print("6) Puestos disponibles")
-		print("7) Puesto de un funcionario")
-		print("8) Horas de una ruta")
-		print("9) Rango de un funcionario")
+		print("1) Visualizar los vuelos disponibles")
+		print("2) Comprar boletos para un vuelo")
+		print("3) Devolver el boleto de un vuelo")		
+		print("4) Cambiar boleto de un vuelo a otro")
 		print("S) Salir")
 		
 		respuesta=input(": ")
@@ -391,16 +386,6 @@ def LoopClientes():
 		if respuesta == "3":
 			pass
 		if respuesta == "4":
-			pass
-		if respuesta == "5":
-			pass
-		if respuesta == "6":
-			pass
-		if respuesta == "7":
-			pass
-		if respuesta == "8":
-			pass
-		if respuesta == "9":
 			pass
 		if respuesta == "S":
 			break
